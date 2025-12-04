@@ -1,23 +1,33 @@
+// app/page.tsx   (App Router)   OR   pages/index.tsx (Pages Router)
+
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
 import Products from "@/components/Products";
 
 export default function Home() {
   return (
-    <main>
-     <Navbar/>
-     <div id="home">
-       <Hero/>
-     </div>
-     <div id="products">
-       <Products/>
-     </div>
-     <div id="about">
-       <About/>
-     </div>
-     <Footer/>
-    </main>
+    <>
+      {/* Navbar is OUTSIDE the <main> so it can be fixed/sticky if you want */}
+      {/* <Navbar /> */}
+
+      {/* The actual page content */}
+      <main>
+        {/* Hero is now rendered ONLY ONCE */}
+        <section id="home">
+          <Hero />
+        </section>
+
+        <section id="products">
+          <Products />
+        </section>
+
+        <section id="about">
+          <About />
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 }

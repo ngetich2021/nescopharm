@@ -4,9 +4,9 @@ import React from 'react';
 export default function Hero() {
   const stats = [
     { value: '30+', label: 'Years of Experience' },
-    { value: '500+', label: 'Medical Products' },
+    // { value: '500+', label: 'Medical Products' },
     { value: '100%', label: 'Customer Satisfaction' },
-    { value: '47', label: 'Countries Served by Our Manufacturers' },
+    // { value: '47', label: 'Countries Served by Our Manufacturers' },
   ];
 
   return (
@@ -39,20 +39,20 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Stats - Full Purple Theme (No Orange) */}
-        <div className="mx-auto grid grid-cols-2 gap-6 px-4 md:grid-cols-4 md:gap-10 lg:gap-14 py-4">
+        {/* Stats - Original Orange Circles with Purple Theme Harmony */}
+        <div className="flex justify-center gap-6 px-4  md:gap-10 lg:gap-14 py-4">
           {stats.map((stat, index) => (
             <div
               key={index}
               className="group flex aspect-square flex-col items-center justify-center rounded-full 
-                         bg-purple-700/95 backdrop-blur-md border border-purple-400/40 shadow-2xl 
-                         transition-all duration-500 hover:scale-110 hover:bg-purple-600 
-                         hover:shadow-purple-500/60 hover:border-purple-300 w-32 sm:w-36 md:w-40 lg:w-48"
+                         bg-purple-600/95 backdrop-blur-md border border-white/25 shadow-2xl 
+                         transition-all duration-500 hover:scale-110 hover:bg-purple-500 
+                         hover:shadow-orange-500/50 w-32 sm:w-36 md:w-40 lg:w-48"
             >
               <span className="text-4xl font-black text-white drop-shadow-lg md:text-5xl lg:text-6xl">
                 {stat.value}
               </span>
-              <span className="mt-3 px-3 text-center text-xs tracking-wider text-purple-100 
+              <span className="mt-3 px-3 text-center text-xs tracking-wider text-white/90 
                                md:text-sm lg:text-base leading-tight">
                 {stat.label}
               </span>
@@ -60,12 +60,12 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* CTA Button - Deep Rich Purple with Elegant Glow */}
+        {/* CTA Button - Your Exact Purple (#1F0D64) with Elegant Shine */}
         <div className="text-center py-4">
-          <button className="group relative overflow-hidden rounded-full bg-purple-800 px-12 py-5 text-xl font-bold text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-purple-700/70 active:scale-95 border border-purple-600">
+          <button className="group relative overflow-hidden rounded-full bg-purple-600 px-12 py-5 text-xl font-bold text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-purple-800/60 active:scale-95">
             <span className="relative z-10">Make Order Now</span>
-            {/* Shining sweep effect */}
-            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-purple-400/30 to-transparent skew-x-12 transition-transform duration-700 group-hover:translate-x-full" />
+            {/* Subtle shine effect on hover */}
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 transition-transform duration-700 group-hover:translate-x-full" />
           </button>
         </div>
       </div>

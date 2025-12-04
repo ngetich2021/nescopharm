@@ -3,7 +3,7 @@ import React from 'react';
 export default function About() {
   return (
     <main className="bg-purple-50 min-h-screen py-12 px-6 md:py-20">
-      <div className="max-w-4xl mx-auto">
+      <div className="w-full mx-auto">
 
         {/* Hero Title - Purple Accent */}
         <div className="text-center mb-16">
@@ -17,7 +17,7 @@ export default function About() {
 
           {/* About us */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-6">About us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-6 text-center">About us</h2>
             <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
               Nescopharm Africa Limited is a trusted distributor of high-quality surgical products in Kenya. 
               We are committed to providing healthcare institutions, hospitals, and medical professionals with 
@@ -31,7 +31,7 @@ export default function About() {
 
           {/* Our Products */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-6">Our Products</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-6 text-center">Our Products</h2>
             <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6">
               We offer a comprehensive range of surgical products and medical supplies tailored to meet the needs 
               of healthcare providers across Kenya. Our product range includes:
@@ -58,7 +58,7 @@ export default function About() {
 
           {/* Our Management */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-6">Our Management</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-6 text-center">Our Management</h2>
             <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
               Our company is led by a team of professionally trained and experienced managers with a strong 
               background in medical supply chain management, regulatory compliance, and customer service. 
@@ -69,7 +69,7 @@ export default function About() {
 
           {/* Our Vision */}
           <section className="bg-purple-100 rounded-2xl p-8 md:p-10 -mx-6 md:mx-0">
-            <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-6">Our Vision</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-6 text-center">Our Vision</h2>
             <p className="text-lg md:text-xl text-purple-900 leading-relaxed italic">
               To offer healthy healthcare solutions that enhance patient outcomes and support the advancement 
               of medical services in Kenya. At Nescopharm Africa Limited, we envision a future where every 
@@ -80,7 +80,7 @@ export default function About() {
 
           {/* Why Choose Us */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-8 text-center">
               Why Choose Nescopharm Africa Limited?
             </h2>
             <div className="space-y-5">
@@ -91,7 +91,7 @@ export default function About() {
                 "Strong ethical standards and regulatory compliance",
                 "Commitment to customer satisfaction and service excellence"
               ].map((item) => (
-                <div key={item} className="flex items-start gap-4 bg-white rounded-xl p-5 shadow-sm border border-purple-100">
+                <div key={item} className="flex items-start gap-4 bg-white rounded-xl p-5 shadow-sm border border-purple-100 w-180">
                   <span className="text-2xl text-purple-600 font-bold">✓</span>
                   <span className="text-lg md:text-xl text-gray-800">{item}</span>
                 </div>

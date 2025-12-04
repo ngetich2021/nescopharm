@@ -184,7 +184,7 @@ export default function Products() {
   return (
     <>
       <main className="h-fit bg-gradient-to-b from-purple-50 via-purple-50 to-purple-100 py-8 px-4 sm:py-12">
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="w-full mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-900 mb-3">
             PRODUCT CATALOGUE
           </h1>
@@ -225,10 +225,10 @@ export default function Products() {
                   <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="p-4 text-center">
-                  <h3 className="font-semibold text-purple-900 text-sm line-clamp-2 leading-tight">
+                  <h3 className="font-semibold text-purple-900 text-lg font-bold line-clamp-2 leading-tight">
                     {product.name}
                   </h3>
-                  <p className="text-xs text-purple-600 mt-1 font-medium">{product.category}</p>
+                  {/* <p className="text-xs text-purple-600 mt-1 font-medium">{product.category}</p> */}
                 </div>
               </button>
             ))}
@@ -276,9 +276,9 @@ export default function Products() {
                       <h2 className="text-2xl sm:text-3xl font-bold text-purple-900 mb-3">
                         {selected.name}
                       </h2>
-                      <span className="inline-block px-5 py-2 bg-purple-100 text-purple-800 text-sm font-bold rounded-full">
+                      {/* <span className="inline-block px-5 py-2 bg-purple-100 text-purple-800 text-sm font-bold rounded-full">
                         {selected.category}
-                      </span>
+                      </span> */}
                     </div>
 
                     <p className="text-gray-700 text-lg leading-relaxed mb-8">
