@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
 import { HiCheckCircle } from "react-icons/hi2";
@@ -10,19 +10,18 @@ type Product = {
   id: number;
   name: string;
   image: string;
-  category: string;
   description: string;
   features: string[];
   sizes?: string;
   packing?: string;
 };
 
+// --- Product Data (Category removed) ---
 const products: Product[] = [
   {
     id: 1,
     name: "Suction Catheter",
     image: "/suction_catheter.jpg",
-    category: "Airway Management",
     description: "Medical grade PVC suction catheter with color-coded connector",
     features: [
       "Medical grade PVC",
@@ -37,7 +36,6 @@ const products: Product[] = [
     id: 2,
     name: "Oxygen Mask",
     image: "/oxygen_mask.jpg",
-    category: "Oxygen Therapy",
     description: "Simple oxygen mask with adjustable strap and 2m tubing",
     features: [
       "100% medical grade PVC",
@@ -53,7 +51,6 @@ const products: Product[] = [
     id: 3,
     name: "Nebulizer Mask",
     image: "/nebulizer_mask.jpg",
-    category: "Respiratory",
     description: "Complete nebulizer mask kit with medication chamber",
     features: [
       "Made of Medical grade PVC",
@@ -69,7 +66,6 @@ const products: Product[] = [
     id: 4,
     name: "Nasal Oxygen Cannula",
     image: "/Nasal_Oxygen_Cannula.jpg",
-    category: "Oxygen Therapy",
     description: "Soft curved prong nasal cannula with over-ear design",
     features: [
       "Medical grade PVC",
@@ -83,7 +79,6 @@ const products: Product[] = [
     id: 5,
     name: "Zinc Oxide Adhesive Plaster",
     image: "/zinc_oxide_tape.jpg",
-    category: "Wound Dressing",
     description: "Strong zinc oxide adhesive tape, hand-tearable",
     features: [
       "made of medical grade PVC",
@@ -96,7 +91,6 @@ const products: Product[] = [
     id: 6,
     name: "Foley Catheter",
     image: "/Foley_catheter.jpg",
-    category: "Urology",
     description: "Silicone-coated latex balloon catheter",
     features: [
       "Made of natural latex",
@@ -113,7 +107,6 @@ const products: Product[] = [
     id: 7,
     name: "Feeding Tube",
     image: "/feeding_tube.jpg",
-    category: "Nutrition",
     description: "Medical grade PVC",
     features: [
       "Medical grade PVC",
@@ -128,7 +121,6 @@ const products: Product[] = [
     id: 8,
     name: "Endotracheal Tube",
     image: "/Endotracheal_tube.jpg",
-    category: "Airway Management",
     description: "Cuffed/uncuffed endotracheal tube with radiopaque line",
     features: [
       "Medical grade PVC",
@@ -142,7 +134,6 @@ const products: Product[] = [
     id: 9,
     name: "Autoclave Tape",
     image: "/Auroclave_tape.jpg",
-    category: "Sterilization",
     description: "Sterilization indicator tape for STEAM & ETO",
     features: [
       "Size: 19mm × 50m",
@@ -155,7 +146,6 @@ const products: Product[] = [
     id: 10,
     name: "Surgical Suture",
     image: "/surgical_suture.jpg",
-    category: "Wound Closure",
     description: "Absorbable & non-absorbable surgical sutures with needles",
     features: [
       "synthetic absorbable,nature absorbable, non absorbable",
@@ -170,15 +160,33 @@ const products: Product[] = [
     ],
   },
 ];
+// --- End Product Data ---
 
 export default function Products() {
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState<Product | null>(null);
 
-  const filteredProducts = products.filter(
-    (p) =>
-      p.name.toLowerCase().includes(search.toLowerCase()) ||
-      p.category.toLowerCase().includes(search.toLowerCase())
+  // Prevent any horizontal scroll when modal is open
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    if (selected) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
+  }, [selected]);
+
+  // Search only by product name (category removed)
+  const filteredProducts = products.filter((p) =>
+    p.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -201,8 +209,8 @@ export default function Products() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-12 pr-5 py-4 rounded-full border-2 border-purple-200 bg-white/90 
-                       focus:border-purple-500 focus:outline-none focus:ring-4 focus:ring-purple-200 
-                       shadow-lg transition-all duration-300 placeholder-purple-400"
+                            focus:border-purple-500 focus:outline-none focus:ring-4 focus:ring-purple-200 
+                            shadow-lg transition-all duration-300 placeholder-purple-400"
             />
           </div>
 
@@ -213,7 +221,7 @@ export default function Products() {
                 key={product.id}
                 onClick={() => setSelected(product)}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 
-                         border border-purple-100 overflow-hidden hover:-translate-y-2"
+                              border border-purple-100 overflow-hidden hover:-translate-y-2"
               >
                 <div className="relative aspect-square bg-purple-50">
                   <Image
@@ -228,7 +236,6 @@ export default function Products() {
                   <h3 className="font-semibold text-purple-900 text-lg font-bold line-clamp-2 leading-tight">
                     {product.name}
                   </h3>
-                  {/* <p className="text-xs text-purple-600 mt-1 font-medium">{product.category}</p> */}
                 </div>
               </button>
             ))}
@@ -238,11 +245,13 @@ export default function Products() {
         {/* Modal */}
         {selected && (
           <>
+            {/* Backdrop */}
             <div
               className="fixed inset-0 bg-purple-950/70 backdrop-blur-sm z-50"
               onClick={() => setSelected(null)}
             />
 
+            {/* Modal Container */}
             <div className="fixed inset-0 z-50 overflow-y-auto p-4">
               <div className="min-h-full flex items-center justify-center">
                 <div
@@ -263,7 +272,7 @@ export default function Products() {
                     <button
                       onClick={() => setSelected(null)}
                       className="absolute top-4 right-4 bg-white/95 hover:bg-purple-100 rounded-full p-3 shadow-xl 
-                               transition-all hover:scale-110 z-10 border-2 border-purple-200"
+                                 transition-all hover:scale-110 z-10 border-2 border-purple-200"
                       aria-label="Close"
                     >
                       <IoClose size={28} className="text-purple-800" />
@@ -276,9 +285,6 @@ export default function Products() {
                       <h2 className="text-2xl sm:text-3xl font-bold text-purple-900 mb-3">
                         {selected.name}
                       </h2>
-                      {/* <span className="inline-block px-5 py-2 bg-purple-100 text-purple-800 text-sm font-bold rounded-full">
-                        {selected.category}
-                      </span> */}
                     </div>
 
                     <p className="text-gray-700 text-lg leading-relaxed mb-8">

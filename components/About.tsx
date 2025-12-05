@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function About() {
   return (
-    <main className="bg-purple-50 min-h-screen py-12 px-6 md:py-20">
-      <div className="w-full mx-auto">
+    <main className="bg-purple-50 h-fit overflow-hidden py-12 px-6 md:py-20">
+      <div className="max-w-screen mx-auto">
 
         {/* Hero Title - Purple Accent */}
         <div className="text-center mb-16">
@@ -91,7 +91,7 @@ export default function About() {
                 "Strong ethical standards and regulatory compliance",
                 "Commitment to customer satisfaction and service excellence"
               ].map((item) => (
-                <div key={item} className="flex items-start gap-4 bg-white rounded-xl p-5 shadow-sm border border-purple-100 w-180">
+                <div key={item} className="flex items-start gap-4 bg-white rounded-xl p-5 shadow-sm border border-purple-100">
                   <span className="text-2xl text-purple-600 font-bold">✓</span>
                   <span className="text-lg md:text-xl text-gray-800">{item}</span>
                 </div>

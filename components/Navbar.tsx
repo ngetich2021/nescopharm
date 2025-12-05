@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: 'Home', href: '#home' },           // Added
+    { name: 'Home', href: '#home' },
     { name: 'About Us', href: '#about' },
     { name: 'Our Products', href: '#products' },
     { name: 'Contact Us', href: '#contact' },
@@ -25,11 +25,11 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Navbar — 100% full width */}
+      {/* Navbar */}
       <nav className="w-full bg-gradient-to-r from-purple-900 via-purple-800 to-purple-700 shadow-2xl shadow-purple-500/50 backdrop-blur-sm sticky top-0 z-40">
         <div className="w-full max-w-none mx-0 px-0">
 
-          {/* Desktop ≥1024px */}
+          {/* Desktop */}
           <div className="hidden lg:flex items-center justify-between px-8 py-3">
             <a href="#home">
               <Image
@@ -56,7 +56,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile + Tablet Header <1024px */}
+          {/* Mobile Header */}
           <div className="lg:hidden flex items-center justify-between px-6 py-3">
             <a href="#home">
               <Image
@@ -68,39 +68,57 @@ export default function Navbar() {
                 priority
               />
             </a>
+
+            {/* Hamburger / Close button – always on top & accessible */}
             <button
               onClick={toggle}
-              className="text-purple-300 hover:text-white z-50 p-1"
-              aria-label="Toggle menu"
+              className="relative text-purple-300 hover:text-white z-50 p-2 transition-colors"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               {isOpen ? <IoClose size={36} /> : <IoMenu size={36} />}
             </button>
           </div>
-
         </div>
       </nav>
 
-      {/* Mobile/Tablet Menu — Exact original slide-in from right */}
-      <div className={`
-        fixed top-20 right-0 h-fit w-fit lg:hidden
-        bg-purple-900/90 backdrop-blur-md border-l border-purple-600/50
-        shadow-2xl shadow-black/80
-        transition-all duration-500 ease-in-out z-50 overflow-hidden
-        ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'}
-      `}>
+      {/* Mobile Menu – EXACTLY your original style: top-20, h-fit, w-fit, NO bg */}
+      <div
+        id="mobile-menu"
+        className={`
+          fixed top-20 right-0 h-fit w-fit lg:hidden
+          border-l border-b border-purple-600/50  bg-purple-700
+          shadow-2xl shadow-black/80
+          transition-all duration-500 ease-in-out z-40
+          ${isOpen 
+            ? 'translate-x-0 opacity-100 pointer-events-auto' 
+            : 'translate-x-full opacity-0 pointer-events-none'
+          }
+        `}
+      >
         <div className="flex flex-col p-8 pt-6 gap-6">
           {links.map(link => (
             <a
               key={link.name}
               href={link.href}
               onClick={close}
-              className="text-2xl font-bold text-purple-200 capitalize tracking-wide hover:text-purple-300 hover:scale-[1.02] transition-all duration-300"
+              className="text-2xl font-bold text-purple-200 capitalize tracking-wide hover:text-purple-300 hover:scale-[1.02] transition-all duration-300 whitespace-nowrap"
             >
               {link.name}
             </a>
           ))}
         </div>
       </div>
+
+      {/* Optional subtle dark overlay (keeps content readable when menu has no bg) */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-30 lg:hidden"
+          onClick={close}
+          aria-hidden="true"
+        />
+      )}
     </>
   );
 }
