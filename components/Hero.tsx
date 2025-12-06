@@ -59,7 +59,7 @@ export default function Hero() {
         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-12">
 
           {/* Stat 1 */}
-          <div className="flex justify-center">
+          <div className="hidden lg:flex justify-center">
             <div className="group flex aspect-square flex-col items-center justify-center rounded-full 
                              bg-purple-600/95 backdrop-blur-md border-4 border-purple-300/50 shadow-2xl 
                              transition-all duration-500 hover:scale-110 hover:bg-purple-500 hover:border-purple-200
@@ -86,7 +86,7 @@ export default function Hero() {
           </div>
 
           {/* Stat 2 */}
-          <div className="flex justify-center">
+          <div className="hidden lg:flex justify-center">
             <div className="group flex aspect-square flex-col items-center justify-center rounded-full 
                              bg-purple-600/95 backdrop-blur-md border-4 border-purple-300/50 shadow-2xl 
                              transition-all duration-500 hover:scale-110 hover:bg-purple-500 hover:border-purple-200
@@ -108,7 +108,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-4 overflow-hidden rounded-full bg-gradient-to-r from-purple-600 to-purple-700 
-                       px-12 py-2 sm:px-16 sm:py-6 text-xl sm:text-2xl font-bold text-white shadow-2xl 
+                       px-4 py-2 sm:px-16 sm:py-6 text-lg sm:text-xl font-bold text-white shadow-2xl 
                        transition-all duration-300 hover:scale-110 hover:from-purple-500 hover:to-purple-600 
                        active:scale-95 border-4 border-purple-300"
           >
