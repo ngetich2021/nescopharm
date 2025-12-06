@@ -65,7 +65,7 @@ const products: Product[] = [
   {
     id: 4,
     name: "Nasal Oxygen Cannula",
-    image: "/Nasal_Oxygen_Cannula.jfif",
+    image: "/Nasal_Oxygen_Cannula.jpg",
     description: "Soft curved prong nasal cannula with over-ear design",
     features: [
       "Medical grade PVC",
@@ -90,7 +90,7 @@ const products: Product[] = [
   {
     id: 6,
     name: "Foley Catheter",
-    image: "/Foley_catheter.jfif",
+    image: "/Foley_catheter.jpg",
     description: "Silicone-coated latex balloon catheter",
     features: [
       "Made of natural latex",
@@ -133,7 +133,7 @@ const products: Product[] = [
   {
     id: 9,
     name: "Autoclave Tape",
-    image: "/Auroclave_tape.jfif",
+    image: "/Auroclave_tape.jpg",
     description: "Sterilization indicator tape for STEAM & ETO",
     features: [
       "Size: 19mm × 50m",
@@ -145,7 +145,7 @@ const products: Product[] = [
   {
     id: 10,
     name: "Surgical Suture",
-    image: "/surgical_suture.jfif",
+    image: "/surgical_suture.jpg",
     description: "Absorbable & non-absorbable surgical sutures with needles",
     features: [
       "synthetic absorbable,nature absorbable, non absorbable",
@@ -164,7 +164,7 @@ const products: Product[] = [
   {
     id: 11,
     name: "Stool Container",
-    image: "/stool_container.jfif",
+    image: "/stool_container.jpg",
     description: "Sterile specimen container with spoon for stool sample collection",
     features: [
       "Medical-grade polypropylene",
@@ -180,7 +180,7 @@ const products: Product[] = [
   {
     id: 12,
     name: "Urine Container",
-    image: "/urine_container.jfif",
+    image: "/urine_container.jpg",
     description: "Sterile urine specimen container with secure screw cap",
     features: [
       "Made from high-clarity polypropylene",
@@ -196,7 +196,7 @@ const products: Product[] = [
   {
     id: 13,
     name: "Crepe Bandage",
-    image: "/crepe_bandage.jfif",
+    image: "/crepe_bandage.jpg",
     description: "Elastic crepe bandage for support, compression & dressing retention",
     features: [
       "High-quality cotton with elastic threads",
@@ -212,7 +212,7 @@ const products: Product[] = [
   {
     id: 14,
     name: "Plaster of Paris Bandage",
-    image: "/plaster_of_paris.jfif",
+    image: "/plaster_of_paris.jpg",
     description: "Fast-setting POP bandage for orthopedic casting and immobilization",
     features: [
       "Premium leno gauze with high-quality gypsum",
@@ -228,7 +228,7 @@ const products: Product[] = [
   {
     id: 15,
     name: "Urine Bag",
-    image: "/urine_bag.jfif",
+    image: "/urine_bag.jpg",
     description: "Disposable urine drainage bag with anti-reflux valve",
     features: [
       "Medical-grade PVC, latex-free",
@@ -247,7 +247,7 @@ const products: Product[] = [
   {
     id: 16,
     name: "Disposable Syringes",
-    image: "/syringes.jfif",
+    image: "/syringes.jpg",
     description: "Sterile single-use syringes available with or without hypodermic needle",
     features: [
       "Medical-grade polypropylene barrel & plunger",
