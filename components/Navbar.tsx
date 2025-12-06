@@ -14,7 +14,6 @@ export default function Navbar() {
     { name: 'Contact Us', href: '#contact' },
   ];
 
-  // Lock scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : 'unset';
     return () => { document.body.style.overflow = 'unset'; };
@@ -33,11 +32,11 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center justify-between px-8 py-3">
             <a href="#home">
               <Image
-                src="/logo.jpeg"
+                src="/nesco6.png"
                 alt="Logo"
-                width={70}
-                height={60}
-                className="transition-transform duration-300 hover:scale-105 ring-2 ring-purple-400"
+                width={72}
+                height={72}
+                className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover ring-4 ring-purple-400/70 shadow-lg transition-transform duration-300 hover:scale-110"
                 priority
               />
             </a>
@@ -60,16 +59,15 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center justify-between px-6 py-3">
             <a href="#home">
               <Image
-                src="/logo.jpeg"
+                src="/nesco6.png"
                 alt="Logo"
-                width={60}
-                height={50}
-                className="ring-1 ring-purple-300"
+                width={64}
+                height={64}
+                className="w-14 h-14 rounded-full object-cover ring-4 ring-purple-300 shadow-md"
                 priority
               />
             </a>
 
-            {/* Hamburger / Close button – always on top & accessible */}
             <button
               onClick={toggle}
               className="relative text-purple-300 hover:text-white z-50 p-2 transition-colors"
@@ -83,12 +81,12 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu – EXACTLY your original style: top-20, h-fit, w-fit, NO bg */}
+      {/* Mobile Menu */}
       <div
         id="mobile-menu"
         className={`
           fixed top-20 right-0 h-fit w-fit lg:hidden
-          border-l border-b border-purple-600/50  bg-purple-700
+          border-l border-b border-purple-600/50 bg-purple-700
           shadow-2xl shadow-black/80
           transition-all duration-500 ease-in-out z-40
           ${isOpen 
@@ -111,7 +109,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Optional subtle dark overlay (keeps content readable when menu has no bg) */}
+      {/* Overlay */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/40 z-30 lg:hidden"

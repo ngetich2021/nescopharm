@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Social from "@/components/Social";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,9 @@ export default function RootLayout({
 
         {/* All page content (including the full-screen Hero) */}
         <div>{children}</div>
+
+        {/* social media */}
+        <Social/>
       </body>
     </html>
   );

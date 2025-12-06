@@ -16,7 +16,7 @@ type Product = {
   packing?: string;
 };
 
-// --- Product Data (Category removed) ---
+// --- Product Data (Now includes Syringes) ---
 const products: Product[] = [
   {
     id: 1,
@@ -65,7 +65,7 @@ const products: Product[] = [
   {
     id: 4,
     name: "Nasal Oxygen Cannula",
-    image: "/Nasal_Oxygen_Cannula.jpg",
+    image: "/Nasal_Oxygen_Cannula.jfif",
     description: "Soft curved prong nasal cannula with over-ear design",
     features: [
       "Medical grade PVC",
@@ -90,7 +90,7 @@ const products: Product[] = [
   {
     id: 6,
     name: "Foley Catheter",
-    image: "/Foley_catheter.jpg",
+    image: "/Foley_catheter.jfif",
     description: "Silicone-coated latex balloon catheter",
     features: [
       "Made of natural latex",
@@ -111,7 +111,7 @@ const products: Product[] = [
     features: [
       "Medical grade PVC",
       "Transparent or frosted",
-      "Tube length: 40cm+2cm(infant), 120cm+2cm(adults)",
+      "Tube length: 40cm±2cm(infant), 120cm±2cm(adults)",
       "Sizes: F4,F6,F8,F10,F12,F14,F16,F18,F20,F22",
       "PE packaging or blister packing",
       "Sterilized by EO GAS",
@@ -133,7 +133,7 @@ const products: Product[] = [
   {
     id: 9,
     name: "Autoclave Tape",
-    image: "/Auroclave_tape.jpg",
+    image: "/Auroclave_tape.jfif",
     description: "Sterilization indicator tape for STEAM & ETO",
     features: [
       "Size: 19mm × 50m",
@@ -145,11 +145,11 @@ const products: Product[] = [
   {
     id: 10,
     name: "Surgical Suture",
-    image: "/surgical_suture.jpg",
+    image: "/surgical_suture.jfif",
     description: "Absorbable & non-absorbable surgical sutures with needles",
     features: [
       "synthetic absorbable,nature absorbable, non absorbable",
-      "polyglycolic acid, polyglactin, polyglactin rapid, polydioxanone",
+      "polyglycolic acid, polyglactin, polyglactin rapid, polydioxanone",    
       "chromic catgut, plain catgut, silk, nylon, polyester, polypropylene",
       "Length: 45cm, 75cm, 90cm, 150cm or customized",
       "Thread no: 0,1,2,2/0,3/0, 4/0, 5/0, 6/0, 7/0, 8/0",
@@ -159,14 +159,118 @@ const products: Product[] = [
       "Micro-point reverse cutting, Micro-point spatula, curved, Blunt taper point, Taper point, Fish look",
     ],
   },
+
+  // ==================== PREVIOUSLY ADDED PRODUCTS ====================
+  {
+    id: 11,
+    name: "Stool Container",
+    image: "/stool_container.jfif",
+    description: "Sterile specimen container with spoon for stool sample collection",
+    features: [
+      "Medical-grade polypropylene",
+      "Leak-proof screw cap with integrated spoon",
+      "Graduated markings for accurate measurement",
+      "Individually packed",
+      "Sterilized or non-sterile options available",
+      "Clear visibility for sample inspection",
+    ],
+    sizes: "30ml, 60ml",
+    packing: "1pc/polybag, 500–1000pcs/carton",
+  },
+  {
+    id: 12,
+    name: "Urine Container",
+    image: "/urine_container.jfif",
+    description: "Sterile urine specimen container with secure screw cap",
+    features: [
+      "Made from high-clarity polypropylene",
+      "Leak-proof double-threaded cap",
+      "Graduated up to 100ml or 120ml",
+      "Label area for patient information",
+      "Sterile (EO gas) or non-sterile",
+      "Wide mouth for easy collection",
+    ],
+    sizes: "60ml, 90ml, 120ml",
+    packing: "Individual sterile pack or bulk",
+  },
+  {
+    id: 13,
+    name: "Crepe Bandage",
+    image: "/crepe_bandage.jfif",
+    description: "Elastic crepe bandage for support, compression & dressing retention",
+    features: [
+      "High-quality cotton with elastic threads",
+      "Excellent stretch and regain properties",
+      "Soft, breathable and skin-friendly",
+      "Washed and ready for use (non-sterile)",
+      "Two metal clips included",
+      "Conforms easily to body contours",
+    ],
+    sizes: "5cm, 7.5cm, 10cm, 15cm × 4.5m (stretched)",
+    packing: "1 roll/polybag, 12 rolls/box",
+  },
+  {
+    id: 14,
+    name: "Plaster of Paris Bandage",
+    image: "/plaster_of_paris.jfif",
+    description: "Fast-setting POP bandage for orthopedic casting and immobilization",
+    features: [
+      "Premium leno gauze with high-quality gypsum",
+      "Creamy texture, fast setting (3–6 minutes)",
+      "Excellent molding and strength",
+      "Low powder loss",
+      "Smooth finish, high stability",
+      "X-ray friendly",
+    ],
+    sizes: "4\", 6\", 8\" × 3.6m (common sizes)",
+    packing: "Individual foil pack, 12 rolls/box",
+  },
+  {
+    id: 15,
+    name: "Urine Bag",
+    image: "/urine_bag.jfif",
+    description: "Disposable urine drainage bag with anti-reflux valve",
+    features: [
+      "Medical-grade PVC, latex-free",
+      "2000ml capacity with clear graduation",
+      "Anti-reflux drip chamber",
+      "T-valve or cross valve outlet",
+      "Non-return valve prevents backflow",
+      "Sterile, single-use",
+      "Bottom outlet for easy emptying",
+    ],
+    sizes: "2000ml standard (pediatric 100–200ml available)",
+    packing: "1pc/PE bag, 250pcs/carton",
+  },
+
+  // ==================== NEW: Syringes (With & Without Needle) ====================
+  {
+    id: 16,
+    name: "Disposable Syringes",
+    image: "/syringes.jfif",
+    description: "Sterile single-use syringes available with or without hypodermic needle",
+    features: [
+      "Medical-grade polypropylene barrel & plunger",
+      "Highly transparent barrel with clear graduation",
+      "Latex-free gasket for smooth movement",
+      "Luer slip or luer lock tip",
+      "With or without needle (21G–27G)",
+      "Ultra-sharp triple-bevel needle (when included)",
+      "EO gas sterilized, non-pyrogenic, non-toxic",
+      "Individual blister packaging",
+    ],
+    sizes: "1ml, 2ml (TB), 3ml, 5ml, 10ml, 20ml, 50/60ml",
+    packing: "1pc/blister pack, 100pcs/box, 2400–3600pcs/carton",
+  },
 ];
 // --- End Product Data ---
 
-export default function Products() {
+export default function Products() 
+  {
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState<Product | null>(null);
 
-  // Prevent any horizontal scroll when modal is open
+  // Prevent horizontal scroll when modal is open
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -184,7 +288,6 @@ export default function Products() {
     };
   }, [selected]);
 
-  // Search only by product name (category removed)
   const filteredProducts = products.filter((p) =>
     p.name.toLowerCase().includes(search.toLowerCase())
   );
@@ -215,7 +318,7 @@ export default function Products() {
           </div>
 
           {/* Product Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-6">
             {filteredProducts.map((product) => (
               <button
                 key={product.id}
@@ -228,7 +331,7 @@ export default function Products() {
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500 rounded-t-2xl"
+                    className="object-fit group-hover:scale-110 transition-transform duration-500 rounded-t-2xl"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -242,23 +345,20 @@ export default function Products() {
           </div>
         </div>
 
-        {/* Modal */}
+        {/* Modal – 100% unchanged */}
         {selected && (
           <>
-            {/* Backdrop */}
             <div
               className="fixed inset-0 bg-purple-950/70 backdrop-blur-sm z-50"
               onClick={() => setSelected(null)}
             />
 
-            {/* Modal Container */}
             <div className="fixed inset-0 z-50 overflow-y-auto p-4">
               <div className="min-h-full flex items-center justify-center">
                 <div
                   className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden relative ring-8 ring-purple-100"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  {/* Hero Image */}
                   <div className="relative h-56 sm:h-72 md:h-80">
                     <Image
                       src={selected.image}
@@ -279,7 +379,6 @@ export default function Products() {
                     </button>
                   </div>
 
-                  {/* Content */}
                   <div className="p-6 sm:p-8">
                     <div className="mb-6">
                       <h2 className="text-2xl sm:text-3xl font-bold text-purple-900 mb-3">
