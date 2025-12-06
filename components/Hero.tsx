@@ -40,8 +40,8 @@ export default function Hero() {
 
         {/* Animated Logo */}
         <div className="mb-2 flex justify-center">
-          <div className="relative w-48 h-48 
-                           rounded-full overflow-hidden shadow-2xl border-8 border-purple-500/30 
+          <div className="relative w-72 h-72 
+                           rounded-full overflow-hidden shadow-2xl border border-purple-500/30 
                            bg-purple-500 backdrop-blur-sm">
             <video
               src="/nesco15.mp4"
@@ -79,7 +79,7 @@ export default function Hero() {
               <p>Medical & Surgical Product Distributor</p>
               <p className="text-white text-base sm:text-lg">(Non-pharma consumable)</p>
               <p className="text-white">Headquarters: Nairobi, Kenya</p>
-              <p className="text-2xl md:text-3xl text-yellow-300 mt-4">
+              <p className="hidden md:block text-lg text-yellow-300 mt-2">
                 Serving All <span className="font-black">47 Counties</span> Nationwide
               </p>
             </div>
@@ -108,7 +108,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-4 overflow-hidden rounded-full bg-gradient-to-r from-purple-600 to-purple-700 
-                       px-4 py-2 sm:px-16 sm:py-6 text-lg sm:text-xl font-bold text-white shadow-2xl 
+                       px-4 py-2 sm:px-16 sm:py-2 text-lg sm:text-xl font-bold text-white shadow-2xl 
                        transition-all duration-300 hover:scale-110 hover:from-purple-500 hover:to-purple-600 
                        active:scale-95 border-4 border-purple-300"
           >
