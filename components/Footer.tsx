@@ -84,7 +84,7 @@ export default function Footer() {
               <span className="text-base font-medium">nescopharmafricaltd</span>
             </a>
 
-            <a href="https://x.com/nescopharmafricaltd" target="_blank" rel="noopener noreferrer"
+            <a href="https://x.com/@nescopharm" target="_blank" rel="noopener noreferrer"
               className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
               <svg width="38" height="38" viewBox="0 0 24 24" fill="currentColor" className="text-white" dangerouslySetInnerHTML={{ __html: siX.svg }} />
               <span className="text-base font-medium">@nescopharmafricaltd</span>
