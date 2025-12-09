@@ -16,7 +16,7 @@ type Product = {
   packing?: string;
 };
 
-// --- Product Data (Now includes Syringes) ---
+// --- Product Data (Now includes the newly requested items) ---
 const products: Product[] = [
   {
     id: 1,
@@ -240,10 +240,10 @@ const products: Product[] = [
       "Bottom outlet for easy emptying",
     ],
     sizes: "2000ml standard (pediatric 100–200ml available)",
-    packing: "1pc/PE bag, 250pcs/carton",
+    packing: "1pc/PE bag, 250pcs/carton", 
   },
 
-  // ==================== NEW: Syringes (With & Without Needle) ====================
+  // ==================== PREVIOUSLY ADDED SYRINGES ====================
   {
     id: 16,
     name: "Disposable Syringes",
@@ -262,11 +262,82 @@ const products: Product[] = [
     sizes: "1ml, 2ml (TB), 3ml, 5ml, 10ml, 20ml, 50/60ml",
     packing: "1pc/blister pack, 100pcs/box, 2400–3600pcs/carton",
   },
+
+  // ==================== NEW PRODUCTS YOU REQUESTED ====================
+  {
+    id: 17,
+    name: "Sterile Gauze Swabs",
+    image: "/Sterile-Gauze-Swabs.jpg",
+    description: "Used for cleaning and dressing wounds\nMade from soft, absorbent cotton gauze\nSterilized to prevent infection\nHigh absorbency for fluids and exudates\nNon-linting texture\nIndividually packed or packed in sets\nSizes: 4\" X 4\"-8ply\nMaterial: medical-grade cotton",
+    features: [
+      "Used for cleaning and dressing wounds",
+      "Made from soft, absorbent cotton gauze",
+      "Sterilized to prevent infection",
+      "High absorbency for fluids and exudates",
+      "Non-linting texture",
+      "Individually packed or packed in sets",
+      "Sizes: 4\" X 4\"-8ply",
+      "Material: medical-grade cotton",
+    ],
+    sizes: "4\" × 4\" (8-ply) – other sizes available on request",
+    packing: "100 pcs/pack or individual sterile peel packs",
+  },
+  {
+    id: 18,
+    name: "WOW BANDAGES/Salvage Gauze",
+    image: "/WOW-BANDAGES.jpg",
+    description: "Used to secure dressings and support injured body parts\nProvides compression and protection\nAvailable in various types: elastic, crepe, adhesive, and roller\nEasy to apply and adjust\nBreathable and flexible material\nWidths: 2–10 cm\nSterile or non-sterile options\nMaterial: cotton, elastic, or synthetic fibers",
+    features: [
+      "Used to secure dressings and support injured body parts",
+      "Provides compression and protection",
+      "Available in various types: elastic, crepe, adhesive, and roller",
+      "Easy to apply and adjust",
+      "Breathable and flexible material",
+      "Widths: 2–10 cm",
+      "Sterile or non-sterile options",
+      "Material: cotton, elastic, or synthetic fibers",
+    ],
+    sizes: "2 cm, 5 cm, 7.5 cm, 10 cm (width) × 4–4.5 m (length)",
+    packing: "Individual roll or 12 rolls/box",
+  },
+  {
+    id: 19,
+    name: "Disposable Vaccination Syringe 0.5ml",
+    image: "/Disposable-Vaccination-Syringe-0.5ml.jpg",
+    description: "Used for intramuscular, subcutaneous, or intradermal injections\nPre-sterilized and single-use to prevent infection\nClear barrel with accurate graduation markings\nSmooth plunger for easy administration\nAttached needle or needleless depending on type\nAvailable in various sizes: 1 ml, 2 ml, 5 ml\nLow dead space design for accurate dosing\nMaterial: medical-grade plastic and stainless steel",
+    features: [
+      "Used for intramuscular, subcutaneous, or intradermal injections",
+      "Pre-sterilized and single-use",
+      "Clear barrel with accurate graduation markings",
+      "Smooth plunger for easy administration",
+      "Attached needle (commonly 23G–25G × 1\")",
+      "Low dead space design",
+      "Material: medical-grade plastic and stainless steel",
+    ],
+    sizes: "0.5 ml (fixed needle), also available in 1 ml, 3 ml, 5 ml",
+    packing: "Individual blister pack, 100 pcs/box",
+  },
+  {
+    id: 20,
+    name: "Disposable Insulin Syringe 0.5ml",
+    image: "/Disposable-Insulin-syringe-0.5m.jpg",
+    description: "Used for subcutaneous administration of insulin\nPre-sterilized and single-use to prevent infection\nClear barrel with accurate graduation markings\nAttached fine needle for minimal pain\nLow dead space design to reduce insulin waste\nLength: 6–8 mm\nGauge: 29–31 G\nMaterial: medical-grade plastic and stainless steel",
+    features: [
+      "Specifically for subcutaneous insulin administration",
+      "Pre-sterilized and single-use",
+      "Ultra-fine needle (29–31G) for minimal pain",
+      "Low dead space to minimize insulin waste",
+      "Clear barrel with U-100 insulin markings",
+      "Needle length: 6–8 mm",
+      "Material: medical-grade plastic and stainless steel",
+    ],
+    sizes: "0.3 ml, 0.5 ml, 1 ml (U-100 markings)",
+    packing: "Individual blister pack, 100 pcs/box",
+  },
 ];
 // --- End Product Data ---
 
-export default function Products() 
-  {
+export default function Products() {
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState<Product | null>(null);
 
@@ -336,7 +407,7 @@ export default function Products()
                   <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="p-4 text-center">
-                  <h3 className="font-semibold text-purple-900 text-lg font-bold line-clamp-2 leading-tight">
+                  <h3 className="text-purple-900 text-lg font-bold line-clamp-2 leading-tight">
                     {product.name}
                   </h3>
                 </div>
@@ -345,7 +416,7 @@ export default function Products()
           </div>
         </div>
 
-        {/* Modal – 100% unchanged */}
+        {/* Modal – unchanged */}
         {selected && (
           <>
             <div

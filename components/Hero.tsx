@@ -18,11 +18,11 @@ export default function Hero() {
       {/* Full Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/nesco4.png"
+          src="/logo-2.png"
           alt="Nescopharm Africa Background"
           fill
           priority
-          className="object-cover object-center"
+          className="object-fit object-center"
           quality={85}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-transparent to-purple-900/70" />
