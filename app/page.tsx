@@ -2,6 +2,7 @@
 
 import About from "@/components/About";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/Form";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
 
@@ -17,6 +18,9 @@ export default function Home() {
         <section id="home">
           <Hero />
         </section>
+         {/* <section id="form">
+          <ContactForm/>
+        </section> */}
 
         <section id="products">
           <Products />
@@ -25,9 +29,13 @@ export default function Home() {
         <section id="about">
           <About />
         </section>
+         <section id="footer">
+          <Footer />
+        </section>
       </main>
+      
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -1,10 +1,14 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
-import { FiPhone } from 'react-icons/fi';
+import { FiPhone, FiMail } from 'react-icons/fi';
+import ContactForm from './Form';
 
 export default function SocialContact() {
   const phoneNumber = "+254741537895";
   const waLink = `https://wa.me/${phoneNumber.replace(/\+/g, '')}`;
+
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
     <>
@@ -41,6 +45,19 @@ export default function SocialContact() {
           </span>
         </a>
 
+        {/* Email Button - Opens Contact Form */}
+        <button
+          type="button"
+          onClick={() => setIsFormOpen(true)}
+          className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-purple-600 shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
+          aria-label="Send Email - Open Contact Form"
+        >
+          <FiMail className="h-7 w-7 text-white" />
+          <span className="absolute right-full mr-3 px-3 py-2 bg-black text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            Send us an Email
+          </span>
+        </button>
+
         {/* Phone 1 - Green */}
         <a
           href={`tel:${phoneNumber}`}
@@ -64,6 +81,14 @@ export default function SocialContact() {
         </a>
 
       </div>
+
+      {/* Contact Form Panel - Slides in from the right (only the form, no extra wrapper or bg) */}
+      {isFormOpen && (
+        <div className="fixed inset-y-0 right-0 z-50 w-full max-w-lg overflow-y-auto transition-transform duration-300 ease-in-out translate-x-0">
+          {/* Pass the close function to ContactForm */}
+          <ContactForm onClose={() => setIsFormOpen(false)} />
+        </div>
+      )}
     </>
   );
 }

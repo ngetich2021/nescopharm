@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Full Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/logo-2.png"
+          src="/nesco-01.png"
           alt="Nescopharm Africa Background"
           fill
           priority
@@ -33,12 +33,12 @@ export default function Hero() {
 
         {/* Title */}
         <h1 className="text-center mb-4 lg:mb-6">
-          <span className="block text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-extrabold text-yellow-300 tracking-tight drop-shadow-2xl">
+          <span className="block text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-extrabold text-white tracking-tight drop-shadow-2xl">
             Nescopharm Africa Limited
           </span>
         </h1>
 
-        {/* Animated Logo */}
+        {/* Animated Logo
         <div className="mb-2 flex justify-center">
           <div className="relative w-72 h-72 
                            rounded-full overflow-hidden shadow-2xl border border-purple-500/30 
@@ -53,7 +53,7 @@ export default function Hero() {
               aria-label="Nescopharm Africa Animated Logo"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* Stats + Description – no outer gap */}
         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-12">

@@ -11,7 +11,7 @@ export default function Navbar() {
     { name: 'Home', href: '#home' },
     { name: 'About Us', href: '#about' },
     { name: 'Our Products', href: '#products' },
-    { name: 'Contact Us', href: '#contact' },
+    { name: 'Contact Us', href: '#footer' },
   ];
 
   useEffect(() => {
