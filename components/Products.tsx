@@ -164,7 +164,7 @@ const products: Product[] = [
   {
     id: 11,
     name: "Stool Container",
-    image: "/stool_container.jpg",
+    image: "/stc.png",
     description: "Sterile specimen container with spoon for stool sample collection",
     features: [
       "Medical-grade polypropylene",
@@ -180,7 +180,7 @@ const products: Product[] = [
   {
     id: 12,
     name: "Urine Container",
-    image: "/urine_container.jpg",
+    image: "/urc.png",
     description: "Sterile urine specimen container with secure screw cap",
     features: [
       "Made from high-clarity polypropylene",
@@ -196,7 +196,7 @@ const products: Product[] = [
   {
     id: 13,
     name: "Crepe Bandage",
-    image: "/crepe_bandage.jpg",
+    image: "/crepe.png",
     description: "Elastic crepe bandage for support, compression & dressing retention",
     features: [
       "High-quality cotton with elastic threads",
@@ -212,7 +212,7 @@ const products: Product[] = [
   {
     id: 14,
     name: "Plaster of Paris Bandage",
-    image: "/plaster_of_paris.jpg",
+    image: "/pob.png",
     description: "Fast-setting POP bandage for orthopedic casting and immobilization",
     features: [
       "Premium leno gauze with high-quality gypsum",
@@ -228,7 +228,7 @@ const products: Product[] = [
   {
     id: 15,
     name: "Urine Bag",
-    image: "/urine_bag.jpg",
+    image: "/urb.png",
     description: "Disposable urine drainage bag with anti-reflux valve",
     features: [
       "Medical-grade PVC, latex-free",
@@ -285,7 +285,7 @@ const products: Product[] = [
   {
     id: 18,
     name: "WOW BANDAGES/Salvage Gauze",
-    image: "/WOW-BANDAGES.jpg",
+    image: "/wow.png",
     description: "Used to secure dressings and support injured body parts\nProvides compression and protection\nAvailable in various types: elastic, crepe, adhesive, and roller\nEasy to apply and adjust\nBreathable and flexible material\nWidths: 2–10 cm\nSterile or non-sterile options\nMaterial: cotton, elastic, or synthetic fibers",
     features: [
       "Used to secure dressings and support injured body parts",
