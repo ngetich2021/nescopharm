@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nescopharm",
+  title: "Nescopharm Africa LTD",
   description: "Medical & Surgical Product Distributor – Kenya",
 };
 
