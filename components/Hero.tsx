@@ -75,12 +75,12 @@ export default function Hero() {
 
           {/* Center Description */}
           <div className="text-center px-6 lg:px-8">
-            <div className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-200 drop-shadow-xl">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-300 drop-shadow-xl">
               <p>Medical & Surgical Product Distributor</p>
               <p className="text-white text-base sm:text-lg">(Non-pharma consumable)</p>
               <p className="text-white">Headquarters: Nairobi, Kenya</p>
-              <p className="hidden md:block text-lg text-yellow-300 mt-2">
-                Serving All <span className="font-black">47 Counties</span> Nationwide
+              <p className="hidden md:block text-xl sm:text-2xl text-yellow-300 mt-2 font-bold">
+                Serving  <span className="font-black"> Countrywide</span>
               </p>
             </div>
           </div>

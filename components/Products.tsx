@@ -78,7 +78,7 @@ const products: Product[] = [
   {
     id: 5,
     name: "Zinc Oxide Adhesive Plaster",
-    image: "/zinc_oxide_tape.jpg",
+    image: "/zinc_oxide.jpeg",
     description: "Strong zinc oxide adhesive tape, hand-tearable",
     features: [
       "made of medical grade PVC",
@@ -212,7 +212,7 @@ const products: Product[] = [
   {
     id: 14,
     name: "Plaster of Paris Bandage",
-    image: "/pob.png",
+    image: "/pop_img.jpeg",
     description: "Fast-setting POP bandage for orthopedic casting and immobilization",
     features: [
       "Premium leno gauze with high-quality gypsum",
@@ -228,7 +228,7 @@ const products: Product[] = [
   {
     id: 15,
     name: "Urine Bag",
-    image: "/urb.png",
+    image: "/urine_bg.jpeg",
     description: "Disposable urine drainage bag with anti-reflux valve",
     features: [
       "Medical-grade PVC, latex-free",
@@ -267,7 +267,7 @@ const products: Product[] = [
   {
     id: 17,
     name: "Sterile Gauze Swabs",
-    image: "/Sterile-Gauze-Swabs.jpg",
+    image: "/str_gauze.jpeg",
     description: "Used for cleaning and dressing wounds\nMade from soft, absorbent cotton gauze\nSterilized to prevent infection\nHigh absorbency for fluids and exudates\nNon-linting texture\nIndividually packed or packed in sets\nSizes: 4\" X 4\"-8ply\nMaterial: medical-grade cotton",
     features: [
       "Used for cleaning and dressing wounds",
@@ -303,7 +303,7 @@ const products: Product[] = [
   {
     id: 19,
     name: "Disposable Vaccination Syringe 0.5ml",
-    image: "/Disposable-Vaccination-Syringe-0.5ml.jpg",
+    image: "/ds_syringe.jpeg",
     description: "Used for intramuscular, subcutaneous, or intradermal injections\nPre-sterilized and single-use to prevent infection\nClear barrel with accurate graduation markings\nSmooth plunger for easy administration\nAttached needle or needleless depending on type\nAvailable in various sizes: 1 ml, 2 ml, 5 ml\nLow dead space design for accurate dosing\nMaterial: medical-grade plastic and stainless steel",
     features: [
       "Used for intramuscular, subcutaneous, or intradermal injections",
@@ -320,7 +320,7 @@ const products: Product[] = [
   {
     id: 20,
     name: "Disposable Insulin Syringe 0.5ml",
-    image: "/Disposable-Insulin-syringe-0.5m.jpg",
+    image: "/ds_insulin.jpeg",
     description: "Used for subcutaneous administration of insulin\nPre-sterilized and single-use to prevent infection\nClear barrel with accurate graduation markings\nAttached fine needle for minimal pain\nLow dead space design to reduce insulin waste\nLength: 6–8 mm\nGauge: 29–31 G\nMaterial: medical-grade plastic and stainless steel",
     features: [
       "Specifically for subcutaneous insulin administration",
