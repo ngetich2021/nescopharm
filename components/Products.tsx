@@ -78,7 +78,7 @@ const products: Product[] = [
   {
     id: 5,
     name: "Zinc Oxide Adhesive Plaster",
-    image: "/zinc_oxide.jpeg",
+    image: "/zin_zic.jpeg",
     description: "Strong zinc oxide adhesive tape, hand-tearable",
     features: [
       "made of medical grade PVC",
@@ -133,7 +133,7 @@ const products: Product[] = [
   {
     id: 9,
     name: "Autoclave Tape",
-    image: "/Auroclave_tape.jpg",
+    image: "/autooo.jpeg",
     description: "Sterilization indicator tape for STEAM & ETO",
     features: [
       "Size: 19mm × 50m",
@@ -196,7 +196,7 @@ const products: Product[] = [
   {
     id: 13,
     name: "Crepe Bandage",
-    image: "/crepe.png",
+    image: "/crep.jpeg",
     description: "Elastic crepe bandage for support, compression & dressing retention",
     features: [
       "High-quality cotton with elastic threads",
@@ -247,7 +247,7 @@ const products: Product[] = [
   {
     id: 16,
     name: "Disposable Syringes",
-    image: "/syringes.jpg",
+    image: "/syn.jpeg",
     description: "Sterile single-use syringes available with or without hypodermic needle",
     features: [
       "Medical-grade polypropylene barrel & plunger",
@@ -285,7 +285,7 @@ const products: Product[] = [
   {
     id: 18,
     name: "WOW BANDAGES/Salvage Gauze",
-    image: "/wow.png",
+    image: "/wo-wo.jpeg",
     description: "Used to secure dressings and support injured body parts\nProvides compression and protection\nAvailable in various types: elastic, crepe, adhesive, and roller\nEasy to apply and adjust\nBreathable and flexible material\nWidths: 2–10 cm\nSterile or non-sterile options\nMaterial: cotton, elastic, or synthetic fibers",
     features: [
       "Used to secure dressings and support injured body parts",
@@ -303,7 +303,7 @@ const products: Product[] = [
   {
     id: 19,
     name: "Disposable Vaccination Syringe 0.5ml",
-    image: "/ds_syringe.jpeg",
+    image: "/v_sy.jpeg",
     description: "Used for intramuscular, subcutaneous, or intradermal injections\nPre-sterilized and single-use to prevent infection\nClear barrel with accurate graduation markings\nSmooth plunger for easy administration\nAttached needle or needleless depending on type\nAvailable in various sizes: 1 ml, 2 ml, 5 ml\nLow dead space design for accurate dosing\nMaterial: medical-grade plastic and stainless steel",
     features: [
       "Used for intramuscular, subcutaneous, or intradermal injections",
@@ -320,7 +320,7 @@ const products: Product[] = [
   {
     id: 20,
     name: "Disposable Insulin Syringe 0.5ml",
-    image: "/ds_insulin.jpeg",
+    image: "/d_ins.jpeg",
     description: "Used for subcutaneous administration of insulin\nPre-sterilized and single-use to prevent infection\nClear barrel with accurate graduation markings\nAttached fine needle for minimal pain\nLow dead space design to reduce insulin waste\nLength: 6–8 mm\nGauge: 29–31 G\nMaterial: medical-grade plastic and stainless steel",
     features: [
       "Specifically for subcutaneous insulin administration",
