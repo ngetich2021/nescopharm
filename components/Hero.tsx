@@ -6,7 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Hero() {
   const stats = [
-    { value: '30+', label: 'Years of Experience' },
+    { value: '30+', label: 'management Years of Experience' },
     { value: '100%', label: 'Customer Satisfaction' },
   ];
 
@@ -15,10 +15,34 @@ export default function Hero() {
 
   return (
     <section className="relative w-full h-fit">
-      {/* Full Background Image */}
-      <div className="absolute inset-0 -z-10">
+      {/* Full Background Image desktop */}
+      <div className="hidden lg:flex absolute inset-0 -z-10">
         <Image
-          src="/nesco-01.png"
+          src="/desk_1.png"
+          alt="Nescopharm Africa Background"
+          fill
+          priority
+          className="object-fit object-center"
+          quality={85}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-transparent to-purple-900/70" />
+      </div>
+       {/* Full Background Image  tablet*/}
+      <div className="hidden sm:flex lg:hidden absolute inset-0 -z-10">
+        <Image
+          src="/desk_1.png"
+          alt="Nescopharm Africa Background"
+          fill
+          priority
+          className="object-fit object-center"
+          quality={85}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-transparent to-purple-900/70" />
+      </div>
+       {/* Full Background Image phones*/}
+      <div className="sm:hidden absolute inset-0 -z-10">
+        <Image
+          src="/sm_2.png"
           alt="Nescopharm Africa Background"
           fill
           priority
@@ -33,7 +57,7 @@ export default function Hero() {
 
         {/* Title */}
         <h1 className="text-center mb-4 lg:mb-6">
-          <span className="block text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-extrabold text-white tracking-tight drop-shadow-2xl">
+          <span className="block text-2xl md:text-5xl lg:text-3xl xl:text-4xl font-extrabold text-white tracking-tight drop-shadow-2xl">
             Nescopharm Africa Limited
           </span>
         </h1>
@@ -63,8 +87,8 @@ export default function Hero() {
             <div className="group flex aspect-square flex-col items-center justify-center rounded-full 
                              bg-purple-600/95 backdrop-blur-md border-4 border-purple-300/50 shadow-2xl 
                              transition-all duration-500 hover:scale-110 hover:bg-purple-500 hover:border-purple-200
-                             w-40 sm:w-48 md:w-56 lg:w-64 p-6">
-              <span className="text-6xl md:text-7xl lg:text-8xl font-black text-white drop-shadow-2xl">
+                             w-40 sm:w-24 md:w-28 lg:w-36 p-2">
+              <span className="text-[12px] md:text-[16px] lg:text-xl font-black text-white drop-shadow-2xl">
                 {stats[0].value}
               </span>
               <span className="mt-3 text-center text-sm sm:text-base lg:text-lg tracking-wider text-white/95 font-medium">
@@ -90,8 +114,8 @@ export default function Hero() {
             <div className="group flex aspect-square flex-col items-center justify-center rounded-full 
                              bg-purple-600/95 backdrop-blur-md border-4 border-purple-300/50 shadow-2xl 
                              transition-all duration-500 hover:scale-110 hover:bg-purple-500 hover:border-purple-200
-                             w-40 sm:w-48 md:w-56 lg:w-64 p-6">
-              <span className="text-5xl md:text-6xl lg:text-7xl font-black text-white drop-shadow-2xl">
+                             w-40 sm:w-24 md:w-28 lg:w-36 p-2">
+              <span className="text-[12px] md:text-[16px] lg:text-xl font-black text-white drop-shadow-2xl">
                 {stats[1].value}
               </span>
               <span className="mt-3 text-center text-sm sm:text-base lg:text-lg tracking-wider text-white/95 font-medium">
@@ -101,7 +125,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* WhatsApp CTA – tighter spacing */}
+        {/* WhatsApp CTA – tighter spacing
         <div className="mt-2 lg:mt-12 text-center">
           <a
             href={whatsappLink}
@@ -119,7 +143,7 @@ export default function Hero() {
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent 
                             skew-x-12 transition-transform duration-1000 group-hover:translate-x-full" />
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
