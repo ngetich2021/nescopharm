@@ -14,53 +14,53 @@ export default function Hero() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello%20Nescopharm%20Africa!%20I%20would%20like%20to%20place%20an%20order%20or%20inquire%20about%20your%20products.`;
 
   return (
-    <section className="relative w-full h-fit">
+    <section className="relative w-full h-48 sm:h-88 lg:h-108">
       {/* Full Background Image desktop */}
       <div className="hidden lg:flex absolute inset-0 -z-10">
         <Image
-          src="/desk_1.png"
+          src="/lglg.png"
           alt="Nescopharm Africa Background"
           fill
           priority
           className="object-fit object-center"
           quality={85}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-transparent to-purple-900/70" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-transparent to-purple-900/70" /> */}
       </div>
        {/* Full Background Image  tablet*/}
       <div className="hidden sm:flex lg:hidden absolute inset-0 -z-10">
         <Image
-          src="/desk_1.png"
+          src="/mdmd.png"
           alt="Nescopharm Africa Background"
           fill
           priority
           className="object-fit object-center"
           quality={85}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-transparent to-purple-900/70" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-transparent to-purple-900/70" /> */}
       </div>
        {/* Full Background Image phones*/}
       <div className="sm:hidden absolute inset-0 -z-10">
         <Image
-          src="/sm_2.png"
+          src="/smsm.png"
           alt="Nescopharm Africa Background"
           fill
           priority
           className="object-fit object-center"
           quality={85}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-transparent to-purple-900/70" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-transparent to-purple-900/70" /> */}
       </div>
 
       {/* Main Content – tight vertical stacking */}
       <div className="relative z-10 flex flex-col items-center px-6 py-2 lg:py-4 gap-0">
 
-        {/* Title */}
+        {/* Title
         <h1 className="text-center mb-4 lg:mb-6">
           <span className="block text-2xl md:text-5xl lg:text-3xl xl:text-4xl font-extrabold text-white tracking-tight drop-shadow-2xl">
             Nescopharm Africa Limited
           </span>
-        </h1>
+        </h1> */}
 
         {/* Animated Logo
         <div className="mb-2 flex justify-center">
@@ -82,7 +82,7 @@ export default function Hero() {
         {/* Stats + Description – no outer gap */}
         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-12">
 
-          {/* Stat 1 */}
+          {/* Stat 1
           <div className="hidden lg:flex justify-center">
             <div className="group flex aspect-square flex-col items-center justify-center rounded-full 
                              bg-purple-600/95 backdrop-blur-md border-4 border-purple-300/50 shadow-2xl 
@@ -95,9 +95,9 @@ export default function Hero() {
                 {stats[0].label}
               </span>
             </div>
-          </div>
+          </div> */}
 
-          {/* Center Description */}
+          {/* Center Description
           <div className="text-center px-6 lg:px-8">
             <div className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-300 drop-shadow-xl">
               <p>Medical & Surgical Product Distributor</p>
@@ -107,9 +107,9 @@ export default function Hero() {
                 Serving  <span className="font-black"> Countrywide</span>
               </p>
             </div>
-          </div>
+          </div> */}
 
-          {/* Stat 2 */}
+          {/* Stat 2
           <div className="hidden lg:flex justify-center">
             <div className="group flex aspect-square flex-col items-center justify-center rounded-full 
                              bg-purple-600/95 backdrop-blur-md border-4 border-purple-300/50 shadow-2xl 
@@ -122,7 +122,7 @@ export default function Hero() {
                 {stats[1].label}
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* WhatsApp CTA – tighter spacing

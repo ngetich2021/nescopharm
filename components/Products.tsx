@@ -368,10 +368,10 @@ export default function Products() {
       <main className="h-fit bg-gradient-to-b from-purple-50 via-purple-50 to-purple-100 py-8 px-4 sm:py-12">
         <div className="w-full mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-900 mb-3">
-            PRODUCT CATALOGUE
+             NESCOPHARM AFRICA LTD
           </h1>
           <p className="text-base sm:text-lg text-purple-700 font-medium mb-10">
-            Nescopharm Africa LTD – Registered by the Pharmacy and Poisons Board of Kenya
+           Product Catalogue
           </p>
 
           {/* Search Bar */}
